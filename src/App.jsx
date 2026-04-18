@@ -4,7 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 // ─── SUPABASE CONFIG ─────────────────────────────────────────────────────────
 // 👇 REPLACE THESE with your real values from Supabase (Step 3 in the guide)
 const SUPABASE_URL = "https://fthnowykgzelourpuldx.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_bDHXy_Nirns5fdhHRT_K5g_wVHEe8r0";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0aG5vd3lrZ3plbG91cnB1bGR4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDc1NDUsImV4cCI6MjA5MjA4MzU0NX0.RV3-cs2b-4EYYGQtVMWYZbl8hdcf6IHliac54yQELY8";
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ─── CONSTANTS ───────────────────────────────────────────────────────────────
