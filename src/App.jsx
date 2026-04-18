@@ -833,11 +833,19 @@ function CSVTab({loadQuestions,user,toast}){
   const fileRef         = useRef();
 
 
-  // fix the above
   const readFile=(e)=>{
-    const f=e.target.files[0];if(!f)return;
-    const r=new FileReader();r.onload=ev=>setCsv(ev.target.result);r.readAsText(f,"UTF-8");
-    if(fileRef.current)fileRef.current.value="";
+    const f=e.target.files[0]; if(!f) return;
+    const tryRead=(enc)=>new Promise(res=>{const r=new FileReader();r.onload=ev=>res(ev.target.result);r.readAsText(f,enc);});
+    (async()=>{
+      const utf8=await tryRead("UTF-8");
+      if(utf8.includes("�")){
+        const win=await tryRead("windows-1252");
+        setCsv(win);
+      } else {
+        setCsv(utf8.replace(/^﻿/,"")); 
+      }
+      if(fileRef.current) fileRef.current.value="";
+    })();
   };
 
   const doImport=async()=>{
