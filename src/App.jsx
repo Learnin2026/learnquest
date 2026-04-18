@@ -3,8 +3,8 @@ import { createClient } from "@supabase/supabase-js";
 
 // ─── SUPABASE CONFIG ─────────────────────────────────────────────────────────
 // 👇 REPLACE THESE with your real values from Supabase (Step 3 in the guide)
-const SUPABASE_URL = "https://YOUR_PROJECT_ID.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR_ANON_KEY_HERE";
+const SUPABASE_URL = "https://fthnowykgzelourpuldx.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_bDHXy_Nirns5fdhHRT_K5g_wVHEe8r0";
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ─── CONSTANTS ───────────────────────────────────────────────────────────────
